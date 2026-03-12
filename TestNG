@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Search-Map Tests" verbose="1">
+
+    <!-- Run smoke only:   mvn test -Dgroups=smoke  -->
+    <!-- Run everything:   mvn test                 -->
+
+    <test name="Zoom Filter Contract Tests">
+        <classes>
+            <class name="com.searchmap.tests.ZoomFilterContractTests"/>
+        </classes>
+    </test>
+
+</suite>
