@@ -1,10 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Search-Map Tests" verbose="1">
-
-    <test name="Zoom Filter Contract Tests">
+    <test name="Search Map Tests">
         <classes>
-            <class name="com.searchmap.tests.ZoomFilterContractTests"/>
+            <class name="com.searchmap.tests.SearchMapTests"/>
         </classes>
     </test>
-
 </suite>
