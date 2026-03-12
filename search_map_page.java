@@ -1,4 +1,4 @@
-   package com.searchmap.pages;
+package com.searchmap.pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,16 +13,16 @@ public class SearchMapPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    private final By searchInput    = By.cssSelector("[data-testid='search-input']");
-    private final By searchButton   = By.cssSelector("[data-testid='search-btn']");
-    private final By filterCategory = By.cssSelector("[data-testid='filter-category']");
-    private final By resultList     = By.cssSelector("[data-testid='result-list']");
-    private final By resultItems    = By.cssSelector("[data-testid='result-item']");
-    private final By emptyState     = By.cssSelector("[data-testid='empty-state']");
-    private final By mapPins        = By.cssSelector("[data-testid='map-pin']");
-    private final By selectedPin    = By.cssSelector("[data-testid='map-pin-selected']");
-    private final By detailPanel    = By.cssSelector("[data-testid='detail-panel']");
-    private final By detailTitle    = By.cssSelector("[data-testid='detail-title']");
+    private final By searchInput    = By.cssSelector("#b4-b2-b1-Input_SearchText");
+    private final By searchButton   = By.cssSelector("#b4-b1-b1-Column2 > div > button > div");
+    private final By filterCategory = By.cssSelector("#b4-b1-b8-OptionsContainer > div > div.\"list.list-group\".OSFillParent > div:nth-child(2) > span");
+    private final By resultList     = By.cssSelector("#b4-b1-b18-SidebarContainer > div");
+    private final By resultItems    = By.cssSelector("#b4-b1-b18-l1-420_191-b2-Column2");
+    private final By emptyState     = By.cssSelector("#b4-b1-b18-b4-b1-Content");
+    private final By mapPins        = By.cssSelector("#b4-b1-b18-b6-MapContainer");
+    private final By selectedPin    = By.cssSelector("#b4-b1-b18-b6-MapContainer > div.leaflet-pane.leaflet-map-pane > div.leaflet-pane.leaflet-marker-pane > img:nth-child(3)");
+    private final By detailPanel    = By.cssSelector("#b4-b1-b18-l1-420_209-AddressContainer > div.margin-top-base > a > span");
+    private final By detailTitle    = By.cssSelector("#b2-Content > a.ThemeGrid_MarginGutter.text-decoration-underline > span");
 
     public SearchMapPage(WebDriver driver) {
         this.driver = driver;
