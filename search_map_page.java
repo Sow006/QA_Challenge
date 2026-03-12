@@ -20,16 +20,14 @@ public class SearchMapPage {
     private final By clearFiltersBtn = By.cssSelector("#b4-b1-b3-l1-415_0-\$b2 > div > span");
 
     // Result List
-    private final By resultItems     = By.cssSelector("[data-testid='result-item']");
-    private final By emptyState      = By.cssSelector("[data-testid='empty-state']");
-    private final By resultList      = By.cssSelector("[data-testid='result-list']");
+    private final By resultItems     = By.cssSelector("#b4-b1-b18-l1-420_28-AddressContainer");
+    private final By emptyState      = By.cssSelector("#b4-b1-b18-b4-b1-Content");
+    private final By resultList      = By.cssSelector("#b4-b1-b18-SidebarContainer > div");
 
     // Map
-    private final By mapPins         = By.cssSelector("[data-testid='map-pin']");
-    private final By selectedPin     = By.cssSelector("[data-testid='map-pin-selected']");
-    private final By zoomInBtn       = By.cssSelector("[data-testid='map-zoom-in']");
-    private final By zoomOutBtn      = By.cssSelector("[data-testid='map-zoom-out']");
-
+    private final By mapPins         = By.cssSelector("#b4-b1-b18-b6-MapContainer");
+    private final By selectedPin     = By.cssSelector("#b4-b1-b18-b6-MapContainer > div.leaflet-pane.leaflet-map-pane > div.leaflet-pane.leaflet-marker-pane > img:nth-child(1)");
+    
     // Detail Panel
     private final By detailPanel     = By.cssSelector("[data-testid='detail-panel']");
     private final By detailTitle     = By.cssSelector("[data-testid='detail-title']");
