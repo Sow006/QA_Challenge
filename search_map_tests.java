@@ -6,20 +6,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/**
- * SearchMapTests
- *
- * Three smoke-suite test cases covering the core behaviours
- * of the Search & Map component:
- *
- *   SF-01  Keyword search returns results and map pins match
- *   SF-03  Applying a filter narrows results and pins stay in sync
- *   RL-02  Clicking an address shows correct data in the detail panel
- */
+
 public class SearchMapTests extends BaseTest {
 
     private SearchMapPage page;
-    private static final String BASE_URL = "https://your-app.com/search";
+    private static final String BASE_URL = "https://gruppenplatz.healthycloud.de/HC_GP_Public_Pages/";
 
     @BeforeMethod
     public void openPage() {
@@ -27,11 +18,8 @@ public class SearchMapTests extends BaseTest {
         page.open(BASE_URL);
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // SF-01: Keyword search returns results; list count matches map pin count
-    // ─────────────────────────────────────────────────────────────────────────
 
-    @Test(groups = {"smoke", "regression"})
+    @Test
     public void SF01_keywordSearchReturnsResultsAndPinsMatch() {
         page.search("pharmacy");
 
@@ -46,9 +34,6 @@ public class SearchMapTests extends BaseTest {
             "list count (" + listCount + ").");
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // SF-03: Applying a filter narrows the results; pins update to match
-    // ─────────────────────────────────────────────────────────────────────────
 
     @Test(groups = {"smoke", "regression"})
     public void SF03_filterNarrowsResultsAndPinsStayInSync() {
@@ -68,9 +53,7 @@ public class SearchMapTests extends BaseTest {
             "filtered result count (" + afterFilter + ").");
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // RL-02: Clicking an address shows the correct data in the detail panel
-    // ─────────────────────────────────────────────────────────────────────────
+
 
     @Test(groups = {"smoke", "regression"})
     public void RL02_clickAddressShowsCorrectDetailData() {
