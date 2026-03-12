@@ -1,6 +1,6 @@
 # QA_Challenge
 
-Search & Map — Selenium Java Tests
+Search & Map- Selenium Java Tests
 Three smoke-suite test cases for the Search & Map component, built with Selenium 4 + TestNG.
 
 Test Cases
