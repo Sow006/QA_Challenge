@@ -9,22 +9,20 @@ public class DriverManager {
 
     private static final ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
 
-    public static WebDriver getDriver() {
-        return driverThread.get();
-    }
+    public static WebDriver getDriver() { return driverThread.get(); }
 
     public static void createDriver() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        // options.addArguments("--headless=new"); // uncomment for CI
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driverThread.set(driver);
     }
 
     public static void quitDriver() {
-        WebDriver driver = driverThread.get();
-        if (driver != null) {
-            driver.quit();
+        if (driverThread.get() != null) {
+            driverThread.get().quit();
             driverThread.remove();
         }
     }
